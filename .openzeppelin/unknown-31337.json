@@ -2,19 +2,19 @@
   "manifestVersion": "3.2",
   "admin": {
     "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
-    "txHash": "0x527390dac02bb5a43f2b7879bd5e7585776c91e202d716747dda040c867ca700"
+    "txHash": "0x5f36088fd2a7d19fcb798fd27ccae931203f5024b205f6909ebe689cc8f3dff1"
   },
   "proxies": [
     {
       "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
-      "txHash": "0x01f894562bf60bc7d0b72f53aa64960f347add7bc85e24a0599556247e973846",
+      "txHash": "0x6b7750e293f148480d3e9aeb2d7ab6dfb71c1477d3dbf2622d9e7b4820ed974d",
       "kind": "transparent"
     }
   ],
   "impls": {
-    "5fb10bfaca621b3044c548a633701df43b7080c3d2e551151308cfa1c8ae38f2": {
+    "e1bba7afb59ce33715b61b5a32e9bc37cf2baf2749ac2add795b58c01aefc96a": {
       "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
-      "txHash": "0x89e4235013220255e10c992fe7e544366b4420b1ee82c714bd8512e82cbf3658",
+      "txHash": "0x75084c1f8b1702255b792d061837a7a76a4fa0a471b8ff5b9ebff6d4b11fb980",
       "layout": {
         "storage": [
           {
@@ -23,7 +23,7 @@
             "slot": "0",
             "type": "t_uint8",
             "contract": "Initializable",
-            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
             "retypedFrom": "bool"
           },
           {
@@ -32,7 +32,7 @@
             "slot": "0",
             "type": "t_bool",
             "contract": "Initializable",
-            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
           },
           {
             "label": "__gap",
@@ -40,7 +40,7 @@
             "slot": "1",
             "type": "t_array(t_uint256)50_storage",
             "contract": "ContextUpgradeable",
-            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
           },
           {
             "label": "_paused",
@@ -48,7 +48,7 @@
             "slot": "51",
             "type": "t_bool",
             "contract": "PausableUpgradeable",
-            "src": "@openzeppelin\\contracts-upgradeable\\security\\PausableUpgradeable.sol:29"
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:29"
           },
           {
             "label": "__gap",
@@ -56,7 +56,7 @@
             "slot": "52",
             "type": "t_array(t_uint256)49_storage",
             "contract": "PausableUpgradeable",
-            "src": "@openzeppelin\\contracts-upgradeable\\security\\PausableUpgradeable.sol:102"
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:102"
           },
           {
             "label": "__gap",
@@ -64,7 +64,7 @@
             "slot": "101",
             "type": "t_array(t_uint256)50_storage",
             "contract": "ERC165Upgradeable",
-            "src": "@openzeppelin\\contracts-upgradeable\\utils\\introspection\\ERC165Upgradeable.sol:41"
+            "src": "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol:41"
           },
           {
             "label": "_roles",
@@ -72,7 +72,7 @@
             "slot": "151",
             "type": "t_mapping(t_bytes32,t_struct(RoleData)34_storage)",
             "contract": "AccessControlUpgradeable",
-            "src": "@openzeppelin\\contracts-upgradeable\\access\\AccessControlUpgradeable.sol:61"
+            "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:61"
           },
           {
             "label": "__gap",
@@ -80,39 +80,39 @@
             "slot": "152",
             "type": "t_array(t_uint256)49_storage",
             "contract": "AccessControlUpgradeable",
-            "src": "@openzeppelin\\contracts-upgradeable\\access\\AccessControlUpgradeable.sol:247"
+            "src": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol:247"
           },
           {
             "label": "allowedTokensAddresses",
             "offset": 0,
             "slot": "201",
             "type": "t_array(t_address)dyn_storage",
-            "contract": "DepositAndWithdrawUpgrade",
-            "src": "contracts\\DepositAndWithdrawUpgrade.sol:30"
+            "contract": "DepositAndWithdrawUpgradeBNB",
+            "src": "contracts/DepositAndWithdrawBNB.sol:30"
           },
           {
             "label": "bnbBalance",
             "offset": 0,
             "slot": "202",
             "type": "t_uint256",
-            "contract": "DepositAndWithdrawUpgrade",
-            "src": "contracts\\DepositAndWithdrawUpgrade.sol:33"
+            "contract": "DepositAndWithdrawUpgradeBNB",
+            "src": "contracts/DepositAndWithdrawBNB.sol:33"
           },
           {
             "label": "contractTokenBalances",
             "offset": 0,
             "slot": "203",
             "type": "t_mapping(t_address,t_uint256)",
-            "contract": "DepositAndWithdrawUpgrade",
-            "src": "contracts\\DepositAndWithdrawUpgrade.sol:34"
+            "contract": "DepositAndWithdrawUpgradeBNB",
+            "src": "contracts/DepositAndWithdrawBNB.sol:34"
           },
           {
             "label": "tokenIsAllowed",
             "offset": 0,
             "slot": "204",
             "type": "t_mapping(t_address,t_bool)",
-            "contract": "DepositAndWithdrawUpgrade",
-            "src": "contracts\\DepositAndWithdrawUpgrade.sol:35"
+            "contract": "DepositAndWithdrawUpgradeBNB",
+            "src": "contracts/DepositAndWithdrawBNB.sol:35"
           }
         ],
         "types": {

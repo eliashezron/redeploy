@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.11;
+pragma solidity ^0.8.17;
 
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
 
-contract DepositAndWithdrawUpgradeEth is
+contract DepositAndWithdrawUpgradeETH is
     Initializable,
     PausableUpgradeable,
     AccessControlUpgradeable
@@ -51,19 +51,18 @@ contract DepositAndWithdrawUpgradeEth is
         ethBalance += msg.value;
     }
 
-    function withdrawEth(address _withdrawerAddress, uint256 _amount)
-        public
-        payable
-        onlyRole(WITHDRAWER_ROLE)
-        whenNotPaused
-    {
+    function withdrawEth(
+        address payable _withdrawerAddress,
+        uint256 _amount
+    ) public payable onlyRole(WITHDRAWER_ROLE) whenNotPaused {
         require(_amount > 0, "Withdraw an amount greater than 0");
         require(
             ethBalance >= _amount,
             "insufficient eth available in the contract"
         );
-        payable(_withdrawerAddress).transfer(_amount);
         ethBalance -= _amount;
+        (bool success, ) = _withdrawerAddress.call{value: _amount}("");
+        require(success, "transfer failed");
         emit FundsWithdrawnEth(_withdrawerAddress, _amount);
     }
 }

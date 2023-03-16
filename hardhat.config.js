@@ -14,6 +14,7 @@ module.exports = {
     apiKey: {
       mainnet: process.env.ETHERSCAN_API_KEY,
       bsc: process.env.BSC_API_KEY,
+      bscTestnet: process.env.BSC_API_KEY,
       rinkeby: process.env.ETHERSCAN_API_KEY,
     },
   },
@@ -53,7 +54,7 @@ module.exports = {
     },
   },
   solidity: {
-    version: "0.8.11",
+    version: "0.8.17",
     settings: {
       optimizer: {
         enabled: true,
