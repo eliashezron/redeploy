@@ -11,7 +11,6 @@ module.exports = {
       mainnet: process.env.ETHERSCAN_API_KEY,
       bsc: process.env.BSC_API_KEY,
       bscTestnet: process.env.BSC_API_KEY,
-      rinkeby: process.env.ETHERSCAN_API_KEY,
     },
   },
   networks: {
