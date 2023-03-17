@@ -21,6 +21,10 @@ async function main() {
   const contractMain = await upgrades.deployProxy(getcontract)
   await contractMain.deployTransaction.wait(1)
 
+  const tokenContract = await ethers.getContractFactory("MockToken")
+  const token = await tokenContract.deploy()
+  await token.deployed()
+
   writeFileSync(
     "deployedBNBContract.json",
     JSON.stringify(

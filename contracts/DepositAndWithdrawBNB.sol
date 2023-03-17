@@ -100,16 +100,15 @@ contract DepositAndWithdrawUpgradeBNB is
     ) public onlyRole(WITHDRAWER_ROLE) whenNotPaused {
         require(_amount > 0, "Withdraw an amount greater than 0");
         require(tokenIsAllowed[_token], "the token is not currently allowed");
-        uint256 contractTokenBalance = contractTokenBalances[_token] -= _amount;
         require(
             IERC20Upgradeable(_token).balanceOf(address(this)) >= _amount,
             "insufficient tokens available in the contract"
         );
+        uint256 contractTokenBalance = contractTokenBalances[_token] -= _amount;
         require(
             IERC20Upgradeable(_token).transfer(_withdrawerAddress, _amount),
             "transfer failed"
         );
-
         emit contractTokenBalanceAdjusted(_token, contractTokenBalance);
         emit FundsWithdrawn(_token, _withdrawerAddress, _amount);
     }
