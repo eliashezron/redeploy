@@ -37,8 +37,7 @@ async function main() {
   )
   console.log("contract token", contractMain.address)
 }
-// proxy = "0x479dbe4dA2Ac5Fe991A3dbeAC7dEA2E22996eb98 "
-// implementation = 0xbdbd74e8f64aff7c1cb5f7fd16ab569604d708f2
+
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
 main()
