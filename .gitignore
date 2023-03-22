@@ -3,9 +3,19 @@ node_modules
 coverage
 coverage.json
 typechain
+<<<<<<< HEAD
 typechain-types
 
 # Hardhat files
 cache
 artifacts
 
+=======
+
+#Hardhat files
+cache
+artifacts
+./scripts/AutoTask.js
+./Scripts/testAT.js
+.openzeppelin
+>>>>>>> origin/main
