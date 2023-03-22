@@ -4,10 +4,7 @@ require("@nomiclabs/hardhat-ethers")
 require("@openzeppelin/hardhat-upgrades")
 require("@nomiclabs/hardhat-etherscan")
 require("ethers")
-<<<<<<< HEAD
 require("hardhat-gas-reporter")
-=======
->>>>>>> origin/main
 module.exports = {
   defaultNetwork: "hardhat",
   etherscan: {
@@ -23,11 +20,7 @@ module.exports = {
     },
     hardhat: {},
     mainnet: {
-<<<<<<< HEAD
       url: `https://eth-mainnet.g.alchemy.com/v2/1SU2dtkiWsvkLBInRr248QsChkkewEqO`,
-=======
-      url: `https://eth-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
->>>>>>> origin/main
       accounts: [process.env.PRIVATE_KEY],
       saveDeployments: true,
       chainId: 1,
@@ -65,13 +58,10 @@ module.exports = {
   mocha: {
     timeout: 20000,
   },
-<<<<<<< HEAD
   gasReporter: {
     // enabled: true,
     currency: "USD",
     token: "ETH",
     coinmarketcap: process.env.COINMARKETCAP_API_KEY,
   },
-=======
->>>>>>> origin/main
 }
